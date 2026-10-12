@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="mb-4">Вход в систему</h2>
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <form method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="mb-3">
+                        <label class="form-label">Логин</label>
+                        <input name="login" class="form-control" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Пароль</label>
+                        <input name="password" type="password"
+                               class="form-control" required />
+                    </div>
+
+                    <button class="btn btn-primary w-100">Войти</button>
+                </form>
+
+                <hr />
+                <small>
+                    Администратор: <b>admin / admin123</b><br />
+                    Сотрудник: <b>employee1 / 123456</b><br />
+                    Сотрудник: <b>employee2 / 123456</b>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>

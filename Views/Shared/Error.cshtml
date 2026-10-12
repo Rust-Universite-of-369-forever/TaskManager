@@ -1,0 +1,9 @@
+@model string
+
+<div class="alert alert-danger">
+    <h3>Произошла ошибка</h3>
+    <p>@Model</p>
+    <a asp-controller="Tasks" asp-action="Index" class="btn btn-primary">
+        Вернуться
+    </a>
+</div>
