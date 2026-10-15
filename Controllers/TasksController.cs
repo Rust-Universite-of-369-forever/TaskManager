@@ -178,8 +178,6 @@ public class TasksController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult RequestTask(int id)
     {
-        // В учебном варианте заявка сразу закрепляет задачу
-        // после проверки свободна ли она.
         var userId = HttpContext.Session.GetInt32("UserId");
         var role = HttpContext.Session.GetString("Role");
 
